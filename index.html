@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAULA</title>
+</head>
+        <style>
+            #bebe{
+               position: absolute;
+               top: 5%;
+               left: 10%;
+            }
+            #velho{
+               width: 1400px;
+               position: absolute;
+               top: 5%;
+               left: 10%;
+           
+            }
+
+        </style>
+<body>
+    
+    <img src="criança.webp" alt="crianca" id="bebe" >
+    <img src="VELHO.jpg" alt="" id="velho" >
+    
+   
+    <script>
+    idade = prompt('Quantos anos você tem?') //leia x
+    bebe = document.querySelector('#bebe')
+    velho = document.querySelector('#velho')
+
+    velho.style.display = 'none'
+    bebe.style.display = 'none'
+
+    if(idade>=18){
+        velho.style.display = 'block'
+    } else{
+        bebe.style.display = 'block'
+    }
+
+   
+
+    </script>
+</body>
+</html>
