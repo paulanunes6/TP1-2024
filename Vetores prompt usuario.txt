@@ -1,9 +1,0 @@
- var numero = []
- var tam = 0 
- tam =  prompt("Quantos números você quer armazenar")
- for(i=0; i<tam; i++){
- 	numero[i] = prompt("Digite o" +(i+1)+ " ° numero")
- }
- for (i=0; i<tam; i++){
- 	alert(numero[i])
- }
