@@ -1,0 +1,22 @@
+<script>
+
+   var numeros1 = []
+   var numeros2 = []
+   var numeros3 = []
+   var tam = 10
+   	
+    alert("Vamos multiplicar 10 números de um vetor com 10 números de outro vetor")
+    for(i=0; i<tam; i++){
+ 	numeros1[i] = prompt("Digite o " +(i+1)+ " ° numero do PRIMEIRO vetor")
+ }
+ 	for(i=0; i<tam; i++){
+ 	numeros2[i] = prompt("Digite o " +(i+1)+ " ° numero do SEGUNDO vetor")
+ }
+ 	    for(i=0; i<tam; i++){
+		numeros3[i] = numeros1[i] * numeros2[i] 
+        alert("Essas são as multiplicações: " + numeros3[i] )
+        }
+	
+ 
+   
+   </script>
