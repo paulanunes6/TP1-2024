@@ -1,0 +1,16 @@
+<script>
+
+	var numeros= []
+    aux= 8
+   
+    alert("Digite 8 números:")
+      for(i=0; i<aux; i++){
+ 	  numeros[i] = prompt("Digite o " +(i+1)+ "° numero")
+      }
+      
+      for(i=0; i<aux; i++){
+ 		if(numeros[i] > 0){
+        alert("Esses são os números positivos: " + numeros[i])
+        }
+      }
+</script>
