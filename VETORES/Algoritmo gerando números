@@ -1,0 +1,24 @@
+<script>
+
+	var numero =Math.random()*100
+    numero = parseInt(numero)
+    var chute
+    alert("Vou gerar um número e você tente acertar!")
+    chute= prompt("Qual número eu gerei?")
+    do{
+    	if(chute>numero){
+        alert(" Você ERROU, tente um número menor que esse ")
+        
+         chute= prompt("Qual número eu gerei?")
+        }
+        else{
+        	alert("Você ERROU, tente um número maior que esse")
+            
+         chute= prompt("Qual número eu gerei?")
+        }
+        
+        }while(chute!=numero)
+        
+        alert("Você ACERTOU, o número é "+ numero) 
+
+</script>
