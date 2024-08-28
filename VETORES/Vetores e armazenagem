@@ -1,0 +1,13 @@
+<script>
+ var numero = []
+ var tam = 0 
+ tam =  prompt("Quantos estudantes você quer armazenar")
+ for(i=0; i<tam; i++){
+ 	numero[i] = prompt("Digite o " +(i+1)+ " ° estudante")
+ }
+ numero.sort()
+ for (i=0; i<tam; i++){
+ 	alert(numero[i])
+ }
+	
+</script>
