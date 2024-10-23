@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p>
+        <label for="">Primeiro Número:</label>
+        <input type="number" id="num1">
+
+     <p>
+        <label for="">Segundo Número:</label>
+        <input type="number" id="num2">
+     </p>   
+            <button onclick="somar()">+</button>
+            <button onclick="adicao()">-</button>
+            <button onclick="mult()">x</button>
+            <button onclick="divisao()">/</button>
+     <p id="resul"> O resultado será exibido aqui: </p>
+           
+
+    <script>
+        function somar(){
+            let n1 = Number(document.getElementById("num1").value)
+            let n2 = Number(document.getElementById("num2").value)
+            let soma = n1+n2
+            document.getElementById("resul").innerText = `A soma de ${n1} e ${n2} é ${soma}` }
+        function adicao(){
+            let n1 = Number(document.getElementById("num1").value)
+            let n2 = Number(document.getElementById("num2").value)
+            let soma = n1-n2
+            document.getElementById("resul").innerText = `A subtração de ${n1} e ${n2} é ${soma}` }
+        function mult(){
+            let n1 = Number(document.getElementById("num1").value)
+            let n2 = Number(document.getElementById("num2").value)
+            let soma = n1*n2
+            document.getElementById("resul").innerText = `A multiplicação de ${n1} e ${n2} é ${soma}` }
+       function divisao(){
+            let n1 = Number(document.getElementById("num1").value)
+            let n2 = Number(document.getElementById("num2").value)
+            let soma = n1/n2
+            document.getElementById("resul").innerText = `A divisão de ${n1} e ${n2} é ${soma}` }
+    </script>
+</body>
+</html>
