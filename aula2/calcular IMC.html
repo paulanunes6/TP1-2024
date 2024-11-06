@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <h3>Vamos Calcular seu IMC</h3>
+    Altura: <input type="text" name="" id="caixaaltura" placeholder="Ex: 1.70">
+    <p>Peso: <input type="text" name="" id="caixapeso" placeholder="Ex: 50"></p>
+    <br><button onclick="calcular()">calcular</button>
+    <p><ul id="seuIMC">Seu IMC é:</ul></p>
+    <p><ul id="class">Sua classificação:</ul></p>
+    
+    
+    <script>
+        function calcular(){
+           
+            let valor1 = document.getElementById("caixaaltura").value
+            let valor2 = document.getElementById("caixapeso").value
+            let altura = valor1*valor1
+            let imc = valor2/altura
+            
+            document.getElementById("seuIMC").innerText = "Seu IMC é: "+imc
+            if(imc < 18.5){
+                document.getElementById("class").innerText = "Sua classificação: Abaixo do peso "
+            }
+
+            else if(imc >= 18.5 && imc<= 24.9){
+                document.getElementById("class").innerText = "Sua classificação: Peso Normal "
+            }
+
+            else if(imc >= 25 && imc<= 29.9){
+                document.getElementById("class").innerText = "Sua classificação: Sobre-Peso "
+            }
+            else if(imc >= 30  && imc<= 34.9){
+                document.getElementById("class").innerText = "Sua classificação: Obesidade Grau 1 "
+            }
+            else if(imc >= 35 && imc<= 39.9){
+                document.getElementById("class").innerText = "Sua classificação: Obesidade Grau 2  "
+            }
+            else if(imc >= 40){
+                document.getElementById("class").innerText = "Sua classificação: Obesidade Grau 3 "
+            }
+
+           
+           
+            if (tarefa != ''){
+            let elemento = document.createElement("li")
+
+            elemento.textContent = tarefa
+            lista.appendChild(elemento)
+            caixa.value = ''
+            }
+          
+            
+        }
+    </script>
+</body>
+</html>
