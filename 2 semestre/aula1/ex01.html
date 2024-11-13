@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: blanchedalmond;
+    }
+    button{
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+<body>
+    <h1>Digite para cada caixa um número de 0 a F</h1>
+    <label for=""> 1:</label>
+    <input type="" id="caixa1">
+    <br>
+    <label for=""> 2:</label>
+    <input type="" id="caixa2">
+    <br>
+    <label for=""> 3:</label>
+    <input type="" id="caixa3">
+    <br>
+    <label for=""> 4:</label>
+    <input type="" id="caixa4">
+    <br>
+    <label for=""> 5:</label>
+    <input type="" id="caixa5">
+    <br>
+    <label for=""> 6:</label>
+    <input type="" id="caixa6">
+   <p><button onclick="juntarcores()">Mudar Cor</button></p>
+
+   <script>
+    function juntarcores(){
+        let n1 = document.getElementById("caixa1").value
+        let n2 = document.getElementById("caixa2").value
+        let n3 = document.getElementById("caixa3").value
+        let n4 = document.getElementById("caixa4").value
+        let n5 = document.getElementById("caixa5").value
+        let n6 = document.getElementById("caixa6").value
+
+        document.body.style.backgroundColor = "#"+n1+n2+n3+n4+n5+n6
+
+    }
+   </script>
+    
+    
+</body>
+</html>
