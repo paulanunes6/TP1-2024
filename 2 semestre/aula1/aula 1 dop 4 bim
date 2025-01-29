@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #candidatos{
+        height: 155px;
+        
+    }
+    #cor{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .botoes{
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    #cor{
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <h1 id="cor">Escolha o seu presidente</h1>
+   <div>
+    <img src="cachorro executivo.webp" alt="" id="candidatos"> 
+    <img src="gato presidente.avif" alt="" id="candidatos">
+    <img src="papagaio presidente.jpeg" alt="" id="candidatos">
+   </div> 
+    <br>
+    <button onclick="cachorro()" class="botoes">Votar em Cachorro</button >
+    <button onclick="gato()" class="botoes">Votar em Gato</button  >  
+    <button onclick="papagaio()" class="botoes">Votar em Papagaio</button >
+        <br>
+        <br>
+        <button onclick="mostrar()" >Mostrar Resultado</button >
+        <button onclick="Reiniciar()" >Reiniciar Votação</button >
+            <br>
+            cachorro:<div id="textoresul1"> </div>
+            <br>
+            gato:
+            <div id="textoresul2"> </div>
+            <br>
+            papagaio:
+            <div id="textoresul3"> </div>
+
+    
+            
+    <script>
+
+        let can1= 0; can2= 0 ;can3=0
+        
+        function cachorro(){
+            can1++
+             alert("Você votou no Cachorro " + can1)
+
+        }
+        function gato(){
+            can2++
+            alert("Você votou no Gato" +can2)
+        }
+        function papagaio(){
+            can3++
+            alert("Você votou no Papagaio" +can3)
+        }
+        function Reiniciar(){
+            can1= 0; can2= 0 ;can3=0
+            let result1 = document.getElementById("textoresul1")
+            let result2 = document.getElementById("textoresul2")
+            let result3 = document.getElementById("textoresul3")
+            result1.innerText = ""
+            result2.innerText = ""
+            result3.innerText = ""
+
+        }
+        function mostrar(){
+            let result1 = document.getElementById("textoresul1")
+            let result2 = document.getElementById("textoresul2")
+            let result3 = document.getElementById("textoresul3")
+            result1.innerText = can1
+            result2.innerText = can2
+            result3.innerText = can3
+ 
+        }
+        let total = can1+can2+can3
+    
+    </script>
+</body>
+</html>
