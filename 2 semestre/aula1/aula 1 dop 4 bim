@@ -45,47 +45,69 @@
             <br>
             papagaio:
             <div id="textoresul3"> </div>
+            <br>
+
+            <div id="vencedor">
+                
+            </div>
 
     
             
     <script>
-
+        let totalv = 0
         let can1= 0; can2= 0 ;can3=0
+        let result1 = document.getElementById("textoresul1")
+        let result2 = document.getElementById("textoresul2")
+        let result3 = document.getElementById("textoresul3")
+        let vencedor = document.getElementById("vencedor")
         
         function cachorro(){
             can1++
              alert("Você votou no Cachorro " + can1)
+             totalv++
 
         }
         function gato(){
             can2++
             alert("Você votou no Gato" +can2)
+            totalv++
         }
         function papagaio(){
             can3++
             alert("Você votou no Papagaio" +can3)
+            totalv++
         }
         function Reiniciar(){
-            can1= 0; can2= 0 ;can3=0
-            let result1 = document.getElementById("textoresul1")
-            let result2 = document.getElementById("textoresul2")
-            let result3 = document.getElementById("textoresul3")
+            can1= 0; can2= 0 ;can3=0; totalv= 0
+            
             result1.innerText = ""
             result2.innerText = ""
             result3.innerText = ""
 
         }
         function mostrar(){
-            let result1 = document.getElementById("textoresul1")
-            let result2 = document.getElementById("textoresul2")
-            let result3 = document.getElementById("textoresul3")
-            result1.innerText = can1
-            result2.innerText = can2
-            result3.innerText = can3
+            
+            let resulcan1 = can1/totalv*100
+            let resulcan2 = can2/totalv*100
+            let resulcan3 = can3/totalv*100
+
+            result1.innerText = "A porcentagem desse candidato é: " +  resulcan1.toFixed(0) +"%"
+            result2.innerText = "A porcentagem desse candidato é: " +  resulcan2.toFixed(0) +"%"
+            result3.innerText = "A porcentagem desse candidato é: " + resulcan3.toFixed(0)  +"%"
+            
+            if(can1>can2 && can1>can3){
+                vencedor.innerText = "O vencedor dessa eleição é o Cachorro, com " +  resulcan1.toFi.
+                xed(0) +"%"
+            }
+            else if(can2>can1 && can2>can3){
+                vencedor.innerText = "O vencedor dessa eleição é o Gato, com " +  resulcan2.toFixed(0) +"%"
+            }
+            else{
+                vencedor.innerText = "O vencedor dessa eleição é o Papagaio, com " +  resulcan3.toFixed(0) +"%"
+            }
  
         }
-        let total = can1+can2+can3
-    
+        
     </script>
 </body>
 </html>
