@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+</style>
+<body>
+    
+    <div id="pagina">
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Dale Cooper</h1>
+    
+    <img src="https://twinpeaksblog.com/wp-content/uploads/2021/03/22_TPB_Prop_RoadhouseReturnHunt_2009CooperThumbsUpLightning.jpg" alt="" width="250px">
+    <br>  
+    <input type="file" name="EditarAvatar" id="">
+   <br>
+   <br>
+   <br>
+   
+    <label for="nascimento">Data de Nascimento: <span class="nascimento"></span></label>
+    <button onclick="nascimento()" class="botoes">Editar</button >
+    <br><br>
+    <label for="Cidade">Cidade: <span class="cidade"></span></label>
+    <button onclick="Cidade()" class="botoes">Editar</button >
+
+        <h3 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Comidas Favoritas:</h3> 
+    
+        
+            <ul>
+
+             <li style="text-align: center;"><label for="passatempos"> <span class="passatempo"></span></li>
+             <li><label for="passatempos2"> <span class="passatempo2"></span></li>
+             <li><label for="passatempos3"> <span class="passatempo3"></span></li>
+             <button onclick="passatempo()" class="botoes">Incluir</button >
+            
+
+            </ul>
+            
+        
+    
+    </div>
+
+    <script>
+        function nascimento(){
+            const nascimento = document.querySelector(".nascimento")
+            nascimento.innerText = "19 de Abril, 1954"
+
+           
+        }
+        function Cidade(){
+        const cidade = document.querySelector(".cidade")
+            cidade.innerText = "Twin Peaks"
+        }
+        function passatempo(){
+            const passatempo = document.querySelector(".passatempo")
+            const passatempo2 = document.querySelector(".passatempo2")
+            const passatempo3 = document.querySelector(".passatempo3")
+            passatempo.innerText ="Torta de Cereja"
+            passatempo2.innerText ="Sorvete de Baunilha"
+            passatempo3.innerText ="Café Preto"
+            
+        }
+
+    
+    </script>
+  
+   
+ 
+
+ 
+</body>
+</html>
