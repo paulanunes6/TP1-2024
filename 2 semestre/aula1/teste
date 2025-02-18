@@ -1,0 +1,17 @@
+  <script>
+        let botao = document.getElementById('btnadicionar')
+        let tabela = document.getElementById('tabela1')
+
+        botao.addEventListener("click", function btnadicionar() {
+
+            let gerarnumero = (Math.random() * (100) + 1).toFixed(0)
+
+            const tr = document.createElement('tr')
+            const td = document.createElement('td')
+            tabela.appendChild(tr)
+            tr.appendChild(td)
+            td.textContent = gerarnumero
+
+
+        })
+    </script>
